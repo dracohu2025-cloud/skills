@@ -7,6 +7,8 @@ A curated collection of custom skills for Claude Code, focusing on content creat
 ### 📝 Content & Localization (内容与本地化)
 | Skill | Description |
 |-------|-------------|
+| **[x-article-publisher](x-article-publisher/)** | Publishes Markdown articles to X (Twitter) Articles via clipboard automation |
+
 | **[markdown-to-twitter](markdown-to-twitter/)** | Converts Markdown articles to Twitter threads or Unicode-styled text |
 | **[article-translator](article-translator/)** | Translates English articles to Simplified Chinese (WeChat MP style) |
 | **[twitter-to-wechat](twitter-to-wechat/)** | Converts Twitter/X threads into WeChat Official Account articles |
