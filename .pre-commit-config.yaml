@@ -1,0 +1,49 @@
+# Pre-commit hooks configuration
+# See https://pre-commit.com for more information
+# Run: pre-commit install to install the hooks
+
+repos:
+  # Detect secrets in code
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: package.lock.json
+
+  # General pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      # Detect private keys
+      - id: detect-private-key
+      # Check for files with large size (>500KB)
+      - id: check-added-large-files
+        args: ['--maxkb=500']
+      # Fix end of files
+      - id: end-of-file-fixer
+      # Trim trailing whitespace
+      - id: trailing-whitespace
+      # Check YAML syntax
+      - id: check-yaml
+      # Check JSON syntax
+      - id: check-json
+      # Prevent committing to main/master
+      - id: no-commit-to-branch
+        args: ['--branch', 'main', '--branch', 'master']
+
+  # Python specific hooks
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        language_version: python3.9
+
+  # Check for security issues in Python dependencies
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.6
+    hooks:
+      - id: bandit
+        args: ['-c', 'pyproject.toml']
+        additional_dependencies: ['bandit[toml]']
+        exclude: ^tests/
