@@ -8,6 +8,8 @@ A curated collection of custom skills for Claude Code, focusing on content creat
 | Skill | Description |
 |-------|-------------|
 | **[wechat-article-writer](wechat-article-writer/)** | 🤖 **Agentic** End-to-end workflow for writing WeChat Official Account articles (Research -> Draft -> Title) |
+| **[bm-md-formatter](bm-md-formatter/)** | Markdown formatting service using bm.md API for multi-platform publishing |
+
 | **[x-article-publisher](x-article-publisher/)** | Publishes Markdown articles to X (Twitter) Articles via clipboard automation |
 | **[markdown-to-twitter](markdown-to-twitter/)** | Converts Markdown articles to Twitter threads or Unicode-styled text |
 | **[content-research-writer](content-research-writer/)** | AI assistant for high-quality content research and writing |
