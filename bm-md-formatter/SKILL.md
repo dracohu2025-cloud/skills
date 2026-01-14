@@ -11,6 +11,7 @@ description: 使用 bm.md 服务进行 Markdown 排版、渲染和格式转换�
 | 功能 | 描述 | 适用场景 |
 |------|------|----------|
 | **Markdown 渲染** | 转换为带内联样式的 HTML | 公众号发布、富文本编辑 |
+| **自动复制到剪贴板** | 渲染后自动打开浏览器并复制富文本 | 一键发布到公众号 |
 | **HTML 转 Markdown** | 逆向转换 HTML 源码 | 内容迁移、存档 |
 | **纯文本提取** | 移除格式，保留文本 | 字数统计、内容分析 |
 | **格式校验修复** | 自动修复 Markdown 问题 | 代码规范、格式统一 |
@@ -33,6 +34,27 @@ description: 使用 bm.md 服务进行 Markdown 排版、渲染和格式转换�
 - `juejin` - 掘金
 
 ## 命令行使用
+
+### 🚀 一键复制到剪贴板（推荐）
+
+自动渲染 Markdown 并在浏览器中打开，内容会自动复制到剪贴板，可直接粘贴到公众号编辑器。
+
+```bash
+# 基本用法（默认 botanical 风格 + 微信平台）
+python3 scripts/render_and_copy.py article.md
+
+# 自定义风格
+python3 scripts/render_and_copy.py article.md --style ayu-light --platform wechat
+
+# 只生成文件，不打开浏览器
+python3 scripts/render_and_copy.py article.md --no-browser
+```
+
+**工作流程**：
+1. 调用 bm.md API 渲染 Markdown
+2. 生成临时 HTML 文件（包含自动复制脚本）
+3. 在浏览器中打开（自动执行复制）
+4. 内容已复制到剪贴板，可直接粘贴（Cmd+V）
 
 ### 渲染 Markdown 为富文本
 
