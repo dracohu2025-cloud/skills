@@ -36,24 +36,22 @@ Common patterns:
 
 ### Step 2: Extract Article Links
 
-To get article URLs from archive page, use `agent-browser`:
+To get article URLs from the archive page, use `agent-browser` or `read_url_content`.
 
-```bash
-# Get clickable snapshot
-agent-browser snapshot -c
+**CRITICAL: Capture Dates**
+You MUST capture the publication date for each article from the archive page, as it is often missing from the article page itself.
 
-# Look for article links with pattern like:
-# link "[Article Title]" [ref=eXXX]:
-#   /url: https://domain.com/letters/article-slug/
-```
+1. Scan the archive page.
+2. Store a map of `{ "URL": "YYYY-MM-DD" }`.
+3. If dates are relative ("2 days ago"), calculate the absolute date.
 
 ### Step 3: Scrape Article Content
 
-To extract full article with images, use `read_url_content`:
+To extract the full article with images, use `read_url_content`:
 
-1. Call `read_url_content` with article URL
-2. View all content chunks using `view_content_chunk`
-3. Look for `<img>` tags in chunks and preserve them
+1. Call `read_url_content` with the article URL.
+2. View all content chunks using `view_content_chunk`.
+3. Look for `<img>` tags in chunks and preserve them.
 
 > **Critical: Image Preservation**
 >
@@ -71,12 +69,12 @@ To extract full article with images, use `read_url_content`:
 
 ### Step 4: Save Raw Article
 
-To save article as Markdown, use this structure:
+To save the article as Markdown, use this structure:
 
 ```markdown
 # [Article Title]
 
-> **Original:** [Title](URL) > **Author:** [Author Name]
+> **Original:** [Title](URL) > **Author:** [Author Name] > **Date:** [YYYY-MM-DD]
 
 ---
 
