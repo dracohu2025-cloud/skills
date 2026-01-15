@@ -18,7 +18,7 @@ A curated collection of custom skills for Claude Code, focusing on content creat
 ### 🌐 Localization & Translation (本地化与翻译)
 | Skill | Description |
 |-------|-------------|
-| **[article-translator](article-translator/)** | Translates English articles to Simplified Chinese (WeChat MP style) |
+| **[article-translator](article-translator/)** | 🖼️ **Visual Retention** English-to-Chinese translator with style switching (--style vivid) |
 | **[twitter-to-wechat](twitter-to-wechat/)** | Converts Twitter/X threads into WeChat Official Account articles |
 
 ### 🖼️ AI Media & Design (AI 媒体与设计)
