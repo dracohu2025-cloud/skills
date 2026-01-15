@@ -45,6 +45,12 @@ You can switch translation styles and target platforms using arguments:
 - Standard Markdown structure.
 - **Visual Integrity Check**: Verify all images from Step 1 are present in their correct translated context.
 
+### Step 4: Update VitePress Index (VitePress Projects Only)
+- **Auto-Discovery**: Check if an `index.md` exists in the target directory (e.g., the folder where you save the translation).
+- **Entry Insertion**: Append or insert a link to the new article in the `index.md` file.
+- **Format**: Use the standard VitePress list or sidebar format (e.g., `- [Translated Title](./filename.md)`).
+- **Date Handling**: If the index is sorted by date, ensure the new entry is placed in the correct chronological position.
+
 ## 📄 Output Structure
 
 ```markdown
