@@ -41,28 +41,22 @@ Select 2-3 strategy combinations based on article type:
 | **Suspense** | Methodologies, clever tricks | "This trick lets you..." |
 | **Contrast** | Tool comparison, solution upgrade | "Goodbye XX, I choose..." |
 
-### 3. Generate Titles and Write to Frontmatter
+### 3. Generate Titles and Write to Markdown
 
-Generate **5** title candidates for each article, write to the beginning of the article in YAML Frontmatter format:
+Generate **5** title candidates for each article, write to the beginning of the article in a Markdown Callout block format:
 
-```yaml
----
-title_candidates:
-  - title: "Title 1"
-    strategy: "Strategy explanation"
-  - title: "Title 2"
-    strategy: "Strategy explanation"
-  - title: "Title 3"
-    strategy: "Strategy explanation"
-  - title: "Title 4"
-    strategy: "Strategy explanation"
-  - title: "Title 5"
-    strategy: "Strategy explanation"
-selected_title: ""  # Fill in after user selects
----
+```markdown
+> [!abstract] 微信公众号标题候选 (WeChat Title Candidates)
+> - **标题 1**: "Title 1" (策略: Strategy explanation)
+> - **标题 2**: "Title 2" (策略: Strategy explanation)
+> - **标题 3**: "Title 3" (策略: Strategy explanation)
+> - **标题 4**: "Title 4" (策略: Strategy explanation)
+> - **标题 5**: "Title 5" (策略: Strategy explanation)
+> 
+> **已选标题**: 
 ```
 
-**Note**: If the article already has Frontmatter, merge into existing Frontmatter; if not, create new.
+**Note**: Always insert this block at the very top of the Markdown file, above any other content. If there's an existing candidate block, replace it.
 
 ## Title Formula Templates
 
@@ -107,21 +101,15 @@ selected_title: ""  # Fill in after user selects
 ### Input Article Topic
 > Using Antigravity Manager to reverse proxy Antigravity tokens for Claude Code use
 
-### Output (Written to Article Frontmatter)
+### Output (Written to Article Top)
 
-```yaml
----
-title_candidates:
-  - title: "Claude Code Users Rejoice! Use This Tool for Unlimited Free Opus 4.5 Quota"
-    strategy: "Group identity + Benefit-driven"
-  - title: "Antigravity + Claude Code: I Found the Ultimate Money-Saving Solution for AI Programming"
-    strategy: "Combination + Personal discovery"
-  - title: "Subscribed to Google One? Congrats, Claude Code is Now Free for You"
-    strategy: "Conditional opening, precisely filter target readers"
-  - title: "Claude Code Too Expensive? This Trick Makes Your Tokens Last Forever"
-    strategy: "Pain point opening + Suspense"
-  - title: "Make Competitors Work for Claude Code! Antigravity Manager God-Tier Technique"
-    strategy: "Contrast + Curiosity"
-selected_title: ""
----
+```markdown
+> [!abstract] 微信公众号标题候选 (WeChat Title Candidates)
+> - **标题 1**: "Claude Code 用户福音！一招解锁免费 Opus 4.5 额度" (策略: Group identity + Benefit-driven)
+> - **标题 2**: "Antigravity + Claude Code：我找到了 AI 编程的终极省钱方案" (策略: Combination + Personal discovery)
+> - **标题 3**: "订阅了 Google One？恭喜，你的 Claude Code 已经免费了" (策略: Conditional opening, precisely filter target readers)
+> - **标题 4**: "Claude Code 流量不够用？这个黑科技让你的 Token 翻倍" (策略: Pain point opening + Suspense)
+> - **标题 5**: "让竞品为 Claude Code 打工！Antigravity Manager 神级配置教程" (策略: Contrast + Curiosity)
+> 
+> **已选标题**: 
 ```
